@@ -2,12 +2,8 @@
 
 React Ultra is a convention and collection of React for Web components that is compatible with React Native. Unlike react-native-web and similar projects, it uses CSS Modules instead of JavaScript styles to unleash the full power of CSS. React Native is becoming the de-facto standard for defining the interface for fundamental components.
 
-<<<<<<< HEAD
 ![sgy 2](https://user-images.githubusercontent.com/16523191/39089800-e9987550-4583-11e8-902c-1e44dc70c4d0.gif)
 
-
-=======
->>>>>>> 4de5b4e8ea1686aea84105a54503d10e0444a68a
 To install and view default components:
 
 1. Type "npm run install"
