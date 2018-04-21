@@ -6,7 +6,7 @@ To install and view default components:
 
 1. Type "npm run install"
 2. Type "npm run styleguidist"
-3. Go to "http://0.0.0.0:3000" in your favorite browser.
+3. Go to "http://localhost:6060/" in your favorite browser.
 4. Profit!
 
 ## Project Direction
