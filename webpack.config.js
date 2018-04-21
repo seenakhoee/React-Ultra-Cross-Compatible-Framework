@@ -19,6 +19,14 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/'
   },
+  resolve: {
+    alias: {
+      "react-native": path.resolve(__dirname, "./src/components/"),
+      "react-zeolite-styles": path.resolve(__dirname, "./src/styles/"),
+      "global-styles$": path.resolve(__dirname, "./src/styles/Global.css"),
+    },
+    extensions: [".js", ".css"]
+  },
   module: {
     rules: [
       {
@@ -28,13 +36,33 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env', '@babel/preset-react'],
-            plugins: ['@babel/plugin-transform-classes']
+            plugins: [
+              '@babel/plugin-proposal-class-properties',
+              'transform-class-properties',
+              '@babel/plugin-transform-classes',
+              '@babel/plugin-proposal-object-rest-spread'
+            ]
           }
         }
       },
       {
         test: /\.scss$/,
         use: cssConfig
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+              localIdentName: "[name]_[local]"
+            }
+          }
+        ]
       }
     ]
   },
